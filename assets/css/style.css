@@ -20,3 +20,18 @@ body{
     height: 90%;
     margin-top: 2rem;
 }
+
+img{
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+}
+
+.contacts_header{
+    background-color: #eaeaea;
+}
+
+.header_right{
+    color: #b1b1b1;
+    font-size: 1.25rem;
+}
