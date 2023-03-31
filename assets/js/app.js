@@ -6,7 +6,7 @@ const { createApp } = Vue
         contacts: [
             {
                 name: 'Michele',
-                avatar: './img/avatar_1_360.jpg',
+                avatar: './assets/img/avatar_1_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -28,7 +28,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Fabio',
-                avatar: './img/avatar_2_360.jpg',
+                avatar: './assets/img/avatar_2_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -50,7 +50,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Samuele',
-                avatar: './img/avatar_3_360.jpg',
+                avatar: './assets/img/avatar_3_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -72,7 +72,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Alessandro B.',
-                avatar: './img/avatar_4_360.jpg',
+                avatar: './assets/img/avatar_4_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -89,7 +89,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Alessandro L.',
-                avatar: './img/avatar_5_360.jpg',
+                avatar: './assets/img/avatar_5_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -106,7 +106,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Claudia',
-                avatar: './img/avatar_6_360.jpg',
+                avatar: './assets/img/avatar_6_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -128,7 +128,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Federico',
-                avatar: './img/avatar_7_360.jpg',
+                avatar: './assets/img/avatar_7_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -145,7 +145,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Davide',
-                avatar: './img/avatar_8_360.jpg',
+                avatar: './assets/img/avatar_8_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -167,5 +167,5 @@ const { createApp } = Vue
             }
         ]
       }
-    }
+    },    
   }).mount('#app')

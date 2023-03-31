@@ -49,7 +49,7 @@
                     <div class="contacts ps-4 pt-3 pb-3" v-for="contact in  contacts">
                         <div class="contact_card">
                             <div class="d-flex align-items-start">
-                                <img src="{{contact.avatar}}" alt="">
+                                <img :src="contact.avatar" alt="">
                                 <div class="info d-flex flex-row justify-content-between">
                                     <div class="name">
                                         <span class="ms-4 fs-5">{{contact.name}}</span>
@@ -82,7 +82,29 @@
                     </div>
                 </header>
                 <!-- CHAT -->
-                <div class="chat">
+                <div class="chat mt-5">
+                    <div class="container_small">
+                        <div class="row">
+                            <div class="col">
+                                <div class="sent d-flex justify-content-end align-items-center mb-2">
+                                    <p class="m-0 sent_msg p-3 rounded-2">Hai portato a spasso il cane?
+                                        <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[0].date}}</span>
+                                    </p>
+                                </div>
+                                <div class="sent d-flex justify-content-end align-items-center mb-2">
+                                    <p class="m-0 sent_msg p-3 rounded-2">Ricordati di stendere i panni <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[0].date}}</span></p>
+                                </div>
+
+                                <div class="recevied d-flex justify-content-start align-items-center">
+                                    <p class="m-0 recevied_msg p-3 rounded-2">Tutto fatto! <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[0].date}}</span></p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="chat_nav">
                     <div class="container-fluid d-flex p-0 position-absolute bottom-0 start-0">
                         <div class="col-1 chat_input p-2 fs-4 d-flex justify-content-center align-items-center"><i class="fa-regular fa-face-smile icon_gray"></i></div>
                         <div class="col-10 chat_input p-2 d-flex justify-content-center align-items-center">

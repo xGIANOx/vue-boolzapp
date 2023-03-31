@@ -18,6 +18,11 @@ body{
     margin-top: 2rem;
 }
 
+.container_small{
+    width: 80%;
+    margin: auto;
+}
+
 img{
     width: 60px;
     aspect-ratio: 1;
@@ -65,7 +70,7 @@ img{
 .box
 {
 overflow-y:auto;
-height: calc(850px - 222px);
+height: calc(850px - 220px);
 background-color: white;
 }
 
@@ -104,4 +109,19 @@ background-color: white;
     padding: 15px;
     border-radius: 5px;
     font-size: 0.75rem;
+}
+
+.sent_msg{
+    background-color: #d5f9ba;
+    font-size: 0.9rem;
+}
+
+.recevied_msg{
+    background-color: white;
+    font-size: 0.9rem;
+}
+
+.msg_time{
+    font-size: 0.75rem;
+    color: lightgray;
 }
