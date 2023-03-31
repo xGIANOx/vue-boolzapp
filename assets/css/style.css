@@ -17,7 +17,7 @@ body{
 
 .container{
     border: 1px solid red;
-    height: 90%;
+    height: 850px;
     margin-top: 2rem;
 }
 
@@ -58,4 +58,20 @@ img{
 
 .search_bar{
     background-color: #fafafa;
+}
+
+.box
+{
+overflow-y:auto;
+height: calc(850px - 238px);
+}
+
+.info{
+    width: 100%;
+}
+
+.last_message,
+.time{
+    font-size: 0.75rem;
+    color: gray;
 }
