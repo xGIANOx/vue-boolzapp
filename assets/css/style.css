@@ -3,7 +3,7 @@ body{
 }
 
 #app{
-    background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(215,219,213,1) 15%);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 25%, rgba(215,219,213,1) 25%);
     height: 100%;
     padding-top: 1rem;
 }
@@ -50,4 +50,12 @@ img{
 
 .notifiche{
     color: #6e6d6d;
+}
+
+.search_btn{
+    background-color: white;
+}
+
+.search_bar{
+    background-color: #fafafa;
 }
