@@ -68,6 +68,7 @@ height: calc(850px - 238px);
 
 .info{
     width: 100%;
+    flex-direction: column;
 }
 
 .last_message,
