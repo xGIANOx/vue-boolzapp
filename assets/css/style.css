@@ -10,13 +10,10 @@ body{
 
 .col-4,
 .col-8{
-    border: 1px solid black;
     height: 100%;
-    
 }
 
 .container{
-    border: 1px solid red;
     height: 850px;
     margin-top: 2rem;
 }
@@ -29,6 +26,11 @@ img{
 
 .contacts_header{
     background-color: #eaeaea;
+}
+.active_contact_header{
+    background-color: #eaeaea;
+    height: 76px;
+    border-left: 1px solid lightgray;
 }
 
 .header_right{
@@ -63,7 +65,8 @@ img{
 .box
 {
 overflow-y:auto;
-height: calc(850px - 238px);
+height: calc(850px - 222px);
+background-color: white;
 }
 
 .info{
@@ -75,4 +78,30 @@ height: calc(850px - 238px);
 .time{
     font-size: 0.75rem;
     color: gray;
+}
+
+.col-8{
+    background-image: url('../img/mine_480.jpg');
+}
+
+.chat_input{
+    background-color: #f3eeea;
+}
+
+.icon_gray{
+    color: gray;
+}
+
+.icon_light{
+    color: #b1b1b1;
+}
+
+.chat_input{
+    flex-grow: 1;
+}
+
+.message_input{
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 0.75rem;
 }

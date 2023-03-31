@@ -6,7 +6,7 @@ const { createApp } = Vue
         contacts: [
             {
                 name: 'Michele',
-                avatar: './https://www.google.com/url?sa=i&url=https%3A%2F%2Fstore.epicgames.com%2Fit%2Fp%2Ffortnite&psig=AOvVaw1FRVE56mHVrKVGZWddF_ar&ust=1680346354015000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCNiV9o2Ahv4CFQAAAAAdAAAAABAE/img/avatar_1_360.jpg',
+                avatar: './img/avatar_1_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -28,7 +28,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Fabio',
-                avatar: './assets/img/avatar_2_360.jpg',
+                avatar: './img/avatar_2_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -50,7 +50,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Samuele',
-                avatar: './assets/img/avatar_3_360.jpg',
+                avatar: './img/avatar_3_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -72,7 +72,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Alessandro B.',
-                avatar: './assets/img/avatar_4_360.jpg',
+                avatar: './img/avatar_4_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -89,7 +89,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Alessandro L.',
-                avatar: './assets/img/avatar_5_360.jpg',
+                avatar: './img/avatar_5_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -106,7 +106,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Claudia',
-                avatar: './assets/img/avatar_6_360.jpg',
+                avatar: './img/avatar_6_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -128,7 +128,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Federico',
-                avatar: './assets/img/avatar_7_360.jpg',
+                avatar: './img/avatar_7_360.jpg',
                 visible: true,
                 messages: [
                     {
@@ -145,7 +145,7 @@ const { createApp } = Vue
             },
             {
                 name: 'Davide',
-                avatar: './assets/img/avatar_8_360.jpg',
+                avatar: './img/avatar_8_360.jpg',
                 visible: true,
                 messages: [
                     {
