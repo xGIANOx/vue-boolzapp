@@ -1,0 +1,22 @@
+body{
+    height: 100vh;
+}
+
+#app{
+    background: linear-gradient(180deg, rgba(0,150,136,1) 15%, rgba(215,219,213,1) 15%);
+    height: 100%;
+    padding-top: 1rem;
+}
+
+.col-4,
+.col-8{
+    border: 1px solid black;
+    height: 100%;
+    
+}
+
+.container{
+    border: 1px solid red;
+    height: 90%;
+    margin-top: 2rem;
+}
