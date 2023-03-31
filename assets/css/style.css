@@ -35,3 +35,19 @@ img{
     color: #b1b1b1;
     font-size: 1.25rem;
 }
+
+.bell{
+    width: 60px;
+    aspect-ratio: 1;
+    background-color: #f2fbff;
+    border-radius: 50%;
+    color: #8edafc;
+}
+
+.banner{
+    background-color: #8edafc;
+}
+
+.notifiche{
+    color: #6e6d6d;
+}
