@@ -4,6 +4,12 @@ const { createApp } = Vue
     data() {
       return {
         activeContact: 0,
+        newMessage: null,
+    newObj: {
+        date: '',
+        message: '',
+        status: 'sent'
+    },
         contacts: [
             {
                 name: 'Michele',
@@ -169,9 +175,33 @@ const { createApp } = Vue
         ]
       }
     },
+    
     methods : {
         changeContact(index){
             this.activeContact = index
+        },
+        nowDate() {
+
+            let day = new Date().getDate()
+            if (day <= 9) {
+                day = '0' + day
+            }
+            let month = (new Date().getMonth()) + 1
+
+            let year = new Date().getFullYear()
+            let hour = new Date().getHours()
+            let minutes = new Date().getMinutes()
+            if (minutes <= 9) {
+                minutes = '0' + minutes
+            }
+            return ` ${day}/0${month}/${year} ${hour}:${minutes}:00 `
+
+        },
+        addNewMessage(){
+            this.newObj.message = this.newMessage
+            this.newObj.date = this.nowDate()
+            this.contacts[this.activeContact].messages.push({ ...this.newObj });
+            this.newMessage = ''
         }
     }    
   }).mount('#app')

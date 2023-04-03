@@ -94,20 +94,8 @@
                                         </p>
                                     </div>
                                 </div>
-                                <!-- <div class="static">
-                                    <div class="sent d-flex justify-content-end align-items-center mb-2">
-                                        <p class="m-0 sent_msg p-3 rounded-2">{{contacts[0].messages[0].message}}
-                                            <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[0].date}}</span>
-                                        </p>
-                                    </div>
-                                    <div class="sent d-flex justify-content-end align-items-center mb-2">
-                                        <p class="m-0 sent_msg p-3 rounded-2">Ricordati di stendere i panni <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[1].date}}</span></p>
-                                    </div>
-    
-                                    <div class="recevied d-flex justify-content-start align-items-center">
-                                        <p class="m-0 recevied_msg p-3 rounded-2">Tutto fatto! <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[2].date}}</span></p>
-                                    </div>
-                                </div> -->
+
+
                             </div>
                         </div>
                     </div>
@@ -117,7 +105,7 @@
                     <div class="container-fluid d-flex p-0 position-absolute bottom-0 start-0">
                         <div class="col-1 chat_input p-2 fs-4 d-flex justify-content-center align-items-center"><i class="fa-regular fa-face-smile icon_gray"></i></div>
                         <div class="col-10 chat_input p-2 d-flex justify-content-center align-items-center">
-                            <input type="text" name="" id="" class="border-0 chat_input bg-light message_input" placeholder="Scrivi un messaggio"> 
+                            <input type="text" name="" id="" class="border-0 chat_input bg-light message_input" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="addNewMessage()"> 
                         </div>
                         <div class="col-1 chat_input p-2 d-flex justify-content-center align-items-center"><i class="fa-solid fa-microphone icon_gray fs-4"></i></div>
                     </div>
