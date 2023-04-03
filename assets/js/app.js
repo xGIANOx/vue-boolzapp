@@ -1,9 +1,17 @@
+class contact {
+    constructor(name, avatar) {
+      this.name = name;
+      this.avatar = avatar;
+    }
+  }
+
 const { createApp } = Vue
 
   createApp({
     data() {
       return {
         activeContact: 0,
+        searchQuery: '',
         newMessage: null,
     newObj: {
         date: '',
@@ -213,6 +221,21 @@ const { createApp } = Vue
             this.contacts[this.activeContact].messages.push({ ...this.newObj });
             this.newObj.message = ''
             this.newObj.status = 'sent'
-        }
-    }    
+        },
+        searchContacts(contact) {
+            if (this.searchQuery.trim() == '') {
+              return false;
+            }
+            if (contact.name.toLowerCase().includes(this.searchQuery.trim().toLowerCase())) {
+              return true;
+            }
+            else {
+              return false;
+            }
+          },
+          favourites(contact) {
+            return contact.visible === true && this.searchQuery.trim() === '';
+          },
+        
+    },
   }).mount('#app')
