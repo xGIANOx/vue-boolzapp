@@ -116,7 +116,7 @@ background-color: white;
     font-size: 0.9rem;
 }
 
-.recevied_msg{
+.received_msg{
     background-color: white;
     font-size: 0.9rem;
 }
@@ -124,4 +124,18 @@ background-color: white;
 .msg_time{
     font-size: 0.75rem;
     color: lightgray;
+}
+
+.sent{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.received{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 1rem;
 }

@@ -46,7 +46,7 @@
                 </div>
                 <!-- ALL CONTACTS -->
                 <div class="box">
-                    <div class="contacts ps-4 pt-3 pb-3" v-for="contact in  contacts">
+                    <div class="contacts ps-4 pt-3 pb-3" v-for="(contact, index) in  contacts">
                         <div class="contact_card">
                             <div class="d-flex align-items-start">
                                 <img :src="contact.avatar" alt="">
@@ -85,20 +85,29 @@
                 <div class="chat mt-5">
                     <div class="container_small">
                         <div class="row">
-                            <div class="col">
-                                <div class="sent d-flex justify-content-end align-items-center mb-2">
-                                    <p class="m-0 sent_msg p-3 rounded-2">Hai portato a spasso il cane?
-                                        <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[0].date}}</span>
-                                    </p>
-                                </div>
-                                <div class="sent d-flex justify-content-end align-items-center mb-2">
-                                    <p class="m-0 sent_msg p-3 rounded-2">Ricordati di stendere i panni <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[1].date}}</span></p>
-                                </div>
+                            <div class="messages flex-column" v-for="(message, index) in contacts[activeContact].messages">
 
-                                <div class="recevied d-flex justify-content-start align-items-center">
-                                    <p class="m-0 recevied_msg p-3 rounded-2">Tutto fatto! <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[2].date}}</span></p>
+                                <div :class="message.status == 'sent' ? 'sent' : 'received'">
+                                    <div>
+                                        <p class="m-0 p-3 rounded-2" :class="message.status == 'sent' ? 'sent_msg' : 'received_msg'">{{message.message}}
+                                            <span class="msg_time ps-3 align-self-end">{{message.date}}</span>
+                                        </p>
+                                    </div>
                                 </div>
-                                
+                                <!-- <div class="static">
+                                    <div class="sent d-flex justify-content-end align-items-center mb-2">
+                                        <p class="m-0 sent_msg p-3 rounded-2">{{contacts[0].messages[0].message}}
+                                            <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[0].date}}</span>
+                                        </p>
+                                    </div>
+                                    <div class="sent d-flex justify-content-end align-items-center mb-2">
+                                        <p class="m-0 sent_msg p-3 rounded-2">Ricordati di stendere i panni <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[1].date}}</span></p>
+                                    </div>
+    
+                                    <div class="recevied d-flex justify-content-start align-items-center">
+                                        <p class="m-0 recevied_msg p-3 rounded-2">Tutto fatto! <span class="msg_time ps-3 align-self-end">{{contacts[0].messages[2].date}}</span></p>
+                                    </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
