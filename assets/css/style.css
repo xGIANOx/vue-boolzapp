@@ -114,16 +114,21 @@ background-color: white;
 .sent_msg{
     background-color: #d5f9ba;
     font-size: 0.9rem;
+    position: relative;
 }
 
 .received_msg{
     background-color: white;
     font-size: 0.9rem;
+    position: relative;
 }
 
 .msg_time{
-    font-size: 0.75rem;
+    font-size: 0.65rem;
     color: lightgray;
+    position: absolute;
+    bottom: 0;
+    right: 14px;
 }
 
 .sent{
@@ -138,4 +143,8 @@ background-color: white;
     justify-content: start;
     align-items: center;
     margin-bottom: 1rem;
+}
+
+.p_2{
+    padding-right: 6rem;
 }

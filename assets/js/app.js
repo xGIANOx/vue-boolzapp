@@ -20,8 +20,8 @@ const { createApp } = Vue
     },
         contacts: [
             {
-                name: 'Michele',
-                avatar: './assets/img/avatar_1_360.jpg',
+                name: 'Federica',
+                avatar: './assets/img/avatar_io_360.jpg',
                 visible: true,
                 messages: [
                     {
