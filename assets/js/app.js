@@ -202,6 +202,17 @@ const { createApp } = Vue
             this.newObj.date = this.nowDate()
             this.contacts[this.activeContact].messages.push({ ...this.newObj });
             this.newMessage = ''
+
+            setTimeout(() => {
+                this.autoReply()
+            }, 1000);
+        },
+        autoReply(){
+            this.newObj.message = 'Ok'
+            this.newObj.status = 'received'
+            this.contacts[this.activeContact].messages.push({ ...this.newObj });
+            this.newObj.message = ''
+            this.newObj.status = 'sent'
         }
     }    
   }).mount('#app')
