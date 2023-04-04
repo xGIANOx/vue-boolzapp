@@ -12,7 +12,8 @@
 <body>
     <div id="app">
         <div class="container d-flex p-0">
-            <!-- ALL CONTACTS -->
+
+            <!-- LEFT -->
             <div class="col-4 left">
                 <header class="contacts_header d-flex justify-content-between align-items-center p-2">
                     <div class="header_left d-flex align-items-center">
@@ -65,8 +66,9 @@
                 </div>
             </div>
 
-            <!-- ACTIVE CHAT -->
+            <!-- RIGHT -->
             <div class="col-8 right position-relative">
+                <!-- ACTIVE CONTACT HEADER -->
                 <header class="active_contact_header d-flex justify-content-between align-items-center p-2">
                     <div class="header_left d-flex align-items-center">
                         <img :src="contacts[activeContact].avatar" alt="">
@@ -81,7 +83,7 @@
                         <i class="fa-solid fa-ellipsis-vertical me-2"></i>
                     </div>
                 </header>
-                <!-- CHAT -->
+                <!-- ACTIVE CHAT -->
                 <div class="chat mt-5">
                     <div class="container_small">
                         <div class="row">
@@ -89,9 +91,28 @@
 
                                 <div :class="message.status == 'sent' ? 'sent' : 'received'">
                                     <div>
-                                        <p class="m-0 pt-3 pb-3 ps-3 p_2 rounded-2" :class="message.status == 'sent' ? 'sent_msg' : 'received_msg'">{{message.message}}
+                                        <div class="m-0 pt-1 pb-3 ps-2 p_2 pe-5 rounded-2 position-relative" :class="message.status == 'sent' ? 'sent_msg' : 'received_msg'">{{message.message}}
+                                            <div class="position-absolute dropdown_position">
+                                                <div class="dropdown">
+                                                    <button class="border-0 "  type="button" data-bs-toggle="dropdown" aria-expanded="false" :class="message.status == 'sent' ? 'green' : 'white'">
+                                                        <i class="fa-solid fa-chevron-down"></i>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                      <li><a class="dropdown-item" href="#">Message info</a></li>
+                                                      <li><a class="dropdown-item" href="#" @click="deleteMessage(index)">Delete message</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        <!-- <span class="dropdown">
+                                            <button class="dropbtn" :class="message.status == 'sent' ? 'green' : 'white'" @click="showDropdown()"><i class="fa-solid fa-chevron-down" :class="message.status == 'sent' ? 'green' : 'white'"></i> </button>
+                                            <div class="dropdown-content" v-bind:style="{ display: computedDisplay }">
+                                            <a href="#">Link 1</a>
+                                            <a href="#">Link 2</a>
+                                            <a href="#">Link 3</a>
+                                            </div>
+                                        </span>                                            -->
                                             <span class="msg_time ps-3 align-self-end ms-3">{{message.date}}</span>
-                                        </p>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -100,7 +121,7 @@
                         </div>
                     </div>
                 </div>
-
+                <!-- CHAT INPUTS -->
                 <div class="chat_nav">
                     <div class="container-fluid d-flex p-0 position-absolute bottom-0 start-0">
                         <div class="col-1 chat_input p-2 fs-4 d-flex justify-content-center align-items-center"><i class="fa-regular fa-face-smile icon_gray"></i></div>
@@ -111,7 +132,6 @@
                     </div>
                 </div>
             </div>
-
 
         </div>
     </div>

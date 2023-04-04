@@ -127,8 +127,8 @@ background-color: white;
     font-size: 0.65rem;
     color: lightgray;
     position: absolute;
-    bottom: 0;
-    right: 14px;
+    bottom: 5px;
+    right: 5px;
 }
 
 .sent{
@@ -145,6 +145,27 @@ background-color: white;
     margin-bottom: 1rem;
 }
 
-.p_2{
-    padding-right: 6rem;
+.fa-chevron-down{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
 }
+.green{
+    color: #d5f9ba;
+    background-color: #d5f9ba;
+}
+
+.white{
+    color: white;
+    background-color: white;
+
+}
+
+.fa-chevron-down:hover{
+    color: black;
+}
+
+.dropdown_position{
+    top: 0;
+    right: 0;
+}
+
