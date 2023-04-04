@@ -177,7 +177,7 @@ const { createApp } = Vue
                         status: 'sent'
                     },
                     {
-                        date: '10/01/2020 15:51:00',
+                        date: '15:51:00',
                         message: 'OK!!',
                         status: 'received'
                     }
