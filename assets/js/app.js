@@ -1,11 +1,3 @@
-class contact {
-    constructor(name, avatar) {
-      this.name = name;
-      this.avatar = avatar;
-    }
-  }
-
-
 /* VUE JS IMPORT */  
 const { createApp } = Vue
 
@@ -15,6 +7,8 @@ const { createApp } = Vue
         activeContact: 0,
         searchQuery: '',
         newMessage: null,
+        lastAccessDate: [],
+        lastAccess: '',
     newObj: {
         date: '',
         message: '',
@@ -240,13 +234,24 @@ const { createApp } = Vue
             else {
               return false;
             }
-          },
-          favourites(contact) {
+        },
+        favourites(contact) {
             return contact.visible === true && this.searchQuery.trim() === '';
-          },
-          deleteMessage(i) {
+        },
+        deleteMessage(i) {
             this.contacts[this.activeContact].messages.splice(i, 1)
         },
+        last_mess(contact) {
+
+            if (contact.messages.length != 0) {
+                return contact.messages[(contact.messages.length) - 1].message  
+            } else {
+                return null
+            }
+
+        },
+
+        
           
         
     }

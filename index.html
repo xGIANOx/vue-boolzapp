@@ -54,11 +54,9 @@
                                 <div class="info d-flex flex-row justify-content-between">
                                     <div class="name">
                                         <span class="ms-4 fs-5">{{contact.name}}</span>
-                                        <p class="p-0 ms-4 last_message">Ultimo messaggio inviato</p>
+                                        <p class="p-0 ms-4 last_message">{{last_mess(contact)}}</p>
                                     </div>
-                                    <div class="time me-2 pt-1 p-2">
-                                        12:00
-                                    </div>
+                                    <div v-if="contact.messages.length > 0" class="time me-2 pt-1 p-2">{{contact.messages[contact.messages.length - 1].date.slice(0,5)}}</div>
                                 </div>
                             </div>
                         </div>
@@ -103,14 +101,7 @@
                                                     </ul>
                                                 </div>
                                             </div>
-                                        <!-- <span class="dropdown">
-                                            <button class="dropbtn" :class="message.status == 'sent' ? 'green' : 'white'" @click="showDropdown()"><i class="fa-solid fa-chevron-down" :class="message.status == 'sent' ? 'green' : 'white'"></i> </button>
-                                            <div class="dropdown-content" v-bind:style="{ display: computedDisplay }">
-                                            <a href="#">Link 1</a>
-                                            <a href="#">Link 2</a>
-                                            <a href="#">Link 3</a>
-                                            </div>
-                                        </span>                                            -->
+                                
                                             <span class="msg_time ps-3 align-self-end ms-3">{{message.date}}</span>
                                         </div>
                                     </div>
