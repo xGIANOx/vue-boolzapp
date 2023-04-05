@@ -7,7 +7,7 @@ const { createApp } = Vue
         activeContact: 0,
         searchQuery: '',
         newMessage: null,
-        randomAnswers: ['Ok', 'Certamente', 'Non lo so..', 'Credo che tu abbia sbagliato chat'],
+        randomAnswers: ['Ok', 'Certamente', 'Non lo so...', 'Credo che tu abbia sbagliato chat'],
         lastAccessDate: [],
         lastAccess: '',
     newObj: {
@@ -244,12 +244,17 @@ const { createApp } = Vue
         last_mess(contact) {
 
             if (contact.messages.length != 0) {
-                return contact.messages[(contact.messages.length) - 1].message  
+                return contact.messages[(contact.messages.length) - 1].message
             } else {
                 return null
             }
 
         },
+        lastMessDate(){
+            let lastMessage = this.contacts[this.activeContact].messages[this.contacts[this.activeContact].messages.length - 1].date.slice(0,5)
+            return lastMessage
+        }
+
 
         
           
