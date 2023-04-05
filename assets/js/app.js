@@ -7,6 +7,7 @@ const { createApp } = Vue
         activeContact: 0,
         searchQuery: '',
         newMessage: null,
+        randomAnswers: ['Ok', 'Certamente', 'Non lo so..', 'Credo che tu abbia sbagliato chat'],
         lastAccessDate: [],
         lastAccess: '',
     newObj: {
@@ -206,18 +207,25 @@ const { createApp } = Vue
         },
         /* LET THE USER SEND A MESSAGE AND RECEIVES AN AUTOREPLY AFTER 1 SEC  */
         addNewMessage(){
-            this.newObj.message = this.newMessage
-            this.newObj.date = this.nowDate()
-            this.contacts[this.activeContact].messages.push({ ...this.newObj });
-            this.newMessage = ''
+            if (this.newMessage.trim() != null) {
+                this.newObj.message = this.newMessage
+                this.newObj.date = this.nowDate()
+                this.contacts[this.activeContact].messages.push({ ...this.newObj });
+                this.newMessage = ''
 
             setTimeout(() => {
                 this.autoReply()
             }, 1000);
+            }
+
         },
         /* AUTOREPLY FUNCTION, THE CONTACT REPLIES 'OK' AUTOMATICALLY AFTER 1 SEC */
         autoReply(){
-            this.newObj.message = 'Ok'
+            let messageIndex = this.randomAnswers.length;
+            //crea una variabile con contenuto un numero random compreso tra  0 e  message_index
+            let randomIndex = Math.floor(Math.random() * messageIndex);
+            //inserisce una stringa in modo random dell'array random_answers al valore della key message dell'ogetto modello
+            this.newObj.message = this.randomAnswers[randomIndex];
             this.newObj.status = 'received'
             this.contacts[this.activeContact].messages.push({ ...this.newObj });
             this.newObj.message = ''
