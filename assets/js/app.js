@@ -189,14 +189,6 @@ const { createApp } = Vue
         },
         /* GET THE PRESENT DATE */
         nowDate() {
-
-            /* let day = new Date().getDate()
-            if (day <= 9) {
-                day = '0' + day
-            }
-            let month = (new Date().getMonth()) + 1
-
-            let year = new Date().getFullYear() */
             let hour = new Date().getHours()
             let minutes = new Date().getMinutes()
             if (minutes <= 9) {
@@ -207,11 +199,11 @@ const { createApp } = Vue
         },
         /* LET THE USER SEND A MESSAGE AND RECEIVES AN AUTOREPLY AFTER 1 SEC  */
         addNewMessage(){
-            if (this.newMessage.trim() != null) {
+            if (this.newMessage.trim() !== null) {
                 this.newObj.message = this.newMessage
                 this.newObj.date = this.nowDate()
                 this.contacts[this.activeContact].messages.push({ ...this.newObj });
-                this.newMessage = ''
+                this.newMessage = null
 
             setTimeout(() => {
                 this.autoReply()
@@ -219,12 +211,10 @@ const { createApp } = Vue
             }
 
         },
-        /* AUTOREPLY FUNCTION, THE CONTACT REPLIES 'OK' AUTOMATICALLY AFTER 1 SEC */
+        /* AUTOREPLY FUNCTION, THE CONTACT REPLIES AUTOMATICALLY WITH A RANDOM STRING AFTER 1 SEC */
         autoReply(){
-            let messageIndex = this.randomAnswers.length;
-            //crea una variabile con contenuto un numero random compreso tra  0 e  message_index
-            let randomIndex = Math.floor(Math.random() * messageIndex);
-            //inserisce una stringa in modo random dell'array random_answers al valore della key message dell'ogetto modello
+            let messageIndex = this.randomAnswers.length;            
+            let randomIndex = Math.floor(Math.random() * messageIndex);           
             this.newObj.message = this.randomAnswers[randomIndex];
             this.newObj.status = 'received'
             this.contacts[this.activeContact].messages.push({ ...this.newObj });
@@ -246,9 +236,11 @@ const { createApp } = Vue
         favourites(contact) {
             return contact.visible === true && this.searchQuery.trim() === '';
         },
+        /* LET THE USER DELETE A MESSAGE */
         deleteMessage(i) {
             this.contacts[this.activeContact].messages.splice(i, 1)
         },
+        /* RETURN THE LAST MESSAGE IN THE CHAT */
         last_mess(contact) {
 
             if (contact.messages.length != 0) {
